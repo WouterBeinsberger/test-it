@@ -36,11 +36,9 @@ nav {
 }
 
 .nav-list {
-  border: 1px #ccc solid;
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
-  
   display: flex;
 }
 
