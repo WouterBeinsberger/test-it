@@ -6,10 +6,12 @@ import BugsView from '@/views/BugsView.vue'
 const routes = [
   {
     path: '/',
+    name: 'home',
     component: HomeView
   },
   {
     path: '/bugs',
+    name: 'bugs',
     component: BugsView
   }
 
