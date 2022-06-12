@@ -1,7 +1,7 @@
 <template>
   <header>
-    <nav>
-      <ul class="nav-list">
+    <nav :style="justifyContect()">
+      <ul class="nav-list" v-if="!isBugsClicked">
         <li class="nav-list__item">
           <a href="#aboutUsSection">About Us</a>
         </li>
@@ -14,12 +14,41 @@
       </ul>
       <ul class="nav-list">
         <li class="nav-list__item">
-          <router-link to="/bugs">Bugs</router-link>
+          <router-link :to="bugsButtonRoute" @click="bugsClicked()">{{ bugsButtonValue }}</router-link>
         </li>
       </ul>
     </nav>
   </header>
 </template>
+
+<script>
+export default {
+  computed: {
+    isBugsClicked() {
+      return this.$store.getters['header/isBugsClicked'];
+    },
+    bugsButtonValue() {
+      return this.$store.getters['header/bugsButtonValue'];
+    },
+    bugsButtonRoute() {
+      if (!this.isBugsClicked) {
+        return { name: 'bugs' };
+      }
+      return { name: 'home' };
+    }
+  },
+  methods: {
+    bugsClicked() {
+      this.$store.dispatch('header/bugsClicked', {isClicked: !this.isBugsClicked});
+    },
+    justifyContect() {
+      if (this.isBugsClicked) {
+        return 'justify-content: flex-end'
+      }
+    }
+  }
+}
+</script>
 
 <style scoped>
 header {
@@ -33,6 +62,7 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
+
 }
 
 .nav-list {
