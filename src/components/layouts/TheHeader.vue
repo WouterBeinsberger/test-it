@@ -1,7 +1,7 @@
 <template>
-  <header>
+  <header :style="changePosition()">
     <nav :style="justifyContect()">
-      <ul class="nav-list" v-if="!isBugsClicked">
+      <ul class="nav-list--left" v-if="!isBugsClicked">
         <li class="nav-list__item">
           <a href="#aboutUsSection">About Us</a>
         </li>
@@ -12,7 +12,7 @@
           <a href="#contactSection">Contact</a>
         </li>
       </ul>
-      <ul class="nav-list">
+      <ul class="nav-list--right">
         <li class="nav-list__item">
           <router-link :to="bugsButtonRoute" @click="bugsClicked()">{{ bugsButtonValue }}</router-link>
         </li>
@@ -45,6 +45,11 @@ export default {
       if (this.isBugsClicked) {
         return 'justify-content: flex-end'
       }
+    },
+    changePosition() {
+      if (!this.isBugsClicked) {
+        return 'position: absolute'
+      }
     }
   }
 }
@@ -53,19 +58,26 @@ export default {
 <style scoped>
 header {
   height: 100px;
-  padding: 0rem 20rem 0rem 20rem;
+  width: 100%;
   display: flex;
   align-items: center;
 }
 
 nav {
   width: 100%;
+  padding: var(--padding-normal);
   display: flex;
   justify-content: space-between;
-
 }
 
-.nav-list {
+.nav-list--right {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--spring-green);
+}
+
+.nav-list--left {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -73,16 +85,16 @@ nav {
 }
 
 .nav-list__item {
-  background: #ccc;
+  font-family: var(--font-fira-code);  
   padding: 1rem 3rem;
-}
-
-.nav-list__item:hover{
-  background: rgb(129, 129, 129);
 }
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
+}
+
+a:hover {
+  color: var(--spring-green);
 }
 </style>
