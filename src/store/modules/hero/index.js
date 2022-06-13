@@ -8,8 +8,7 @@ export default {
   },
   state() {
     return {
-      isBugsClicked: false,
-      bugsButtonValue: "Bugs"
+      hero: null
     }
   },
   mutations,
