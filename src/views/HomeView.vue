@@ -1,9 +1,13 @@
 <template>
-  <h1>Home</h1>
+  <the-hero></the-hero>
 </template>
 
 <script>
-export default {
+import TheHero from '@/components/hero/TheHero.vue'
 
+export default {
+  components: {
+    TheHero
+  }
 }
 </script>
