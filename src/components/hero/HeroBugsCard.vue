@@ -65,6 +65,7 @@ export default {
       } catch (error) {
         alert("something went wrong while updating data: " + error.message);
       }
+      alert("Hero bugs saved.");
     },
   },
 };
