@@ -1,5 +1,9 @@
 <template>
-  <section v-if="hero" :id="hero.elementId" class="hero">
+  <section
+    v-if="hero && hero.content.section.isDisplayed"
+    :id="hero.content.section.elementId"
+    class="hero"
+  >
     <h1
       v-if="hero.content.title.isDisplayed"
       :id="hero.content.title.elementId"
@@ -50,13 +54,13 @@ export default {
 }
 
 .hero__title {
-  color: var(--periwinkle-crayola);
+  color: var(--gray-lightest);
   font-size: 80px;
   padding: 20px 0px;
 }
 
 .hero__sub-description {
-  color: var(--bdazzled-blue);
+  color: var(--gray-light);
   font-size: 60px;
 }
 </style>
