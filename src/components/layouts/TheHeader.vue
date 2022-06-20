@@ -1,21 +1,21 @@
 <template>
   <header :style="changePosition()">
     <nav :style="justifyContect()">
-      <ul class="nav-list--left" v-if="!isBugsClicked">
-        <li class="nav-list__item">
+      <ul class="nav-list__left" v-if="!isBugsClicked">
+        <li class="nav-list-left__item">
           <a href="#aboutUsSection">About Us</a>
         </li>
-        <li class="nav-list__item">
+        <li class="nav-list-left__item">
           <a href="#servicesSection">Services</a>
         </li>
-        <li class="nav-list__item">
+        <li class="nav-list-left__item">
           <a href="#contactSection">Contact</a>
         </li>
       </ul>
-      <ul class="nav-list--right">
-        <li class="nav-list__item">
-          <router-link :to="bugsButtonRoute" @click="bugsClicked()">{{ bugsButtonValue }}</router-link>
-        </li>
+      <ul class="nav-list__right">
+        <base-button link :to="bugsButtonRoute" @click="bugsClicked()">
+          <li class="nav-list-right__item">{{ bugsButtonValue }}</li>
+        </base-button>
       </ul>
     </nav>
   </header>
@@ -25,34 +25,36 @@
 export default {
   computed: {
     isBugsClicked() {
-      return this.$store.getters['header/isBugsClicked'];
+      return this.$store.getters["header/isBugsClicked"];
     },
     bugsButtonValue() {
-      return this.$store.getters['header/bugsButtonValue'];
+      return this.$store.getters["header/bugsButtonValue"];
     },
     bugsButtonRoute() {
       if (!this.isBugsClicked) {
-        return { name: 'bugs' };
+        return "/bugs";
       }
-      return { name: 'home' };
-    }
+      return "/";
+    },
   },
   methods: {
     bugsClicked() {
-      this.$store.dispatch('header/bugsClicked', {isClicked: !this.isBugsClicked});
+      this.$store.dispatch("header/bugsClicked", {
+        isClicked: !this.isBugsClicked,
+      });
     },
     justifyContect() {
       if (this.isBugsClicked) {
-        return 'justify-content: flex-end'
+        return "justify-content: flex-end";
       }
     },
     changePosition() {
       if (!this.isBugsClicked) {
-        return 'position: absolute'
+        return "position: absolute";
       }
-    }
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
@@ -66,35 +68,45 @@ header {
 nav {
   width: 100%;
   padding: var(--padding-normal);
+  font-family: var(--font-fira-code);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
-.nav-list--right {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  border: 1px solid var(--spring-green);
-}
-
-.nav-list--left {
+.nav-list__right {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
 }
 
-.nav-list__item {
-  font-family: var(--font-fira-code);  
+.nav-list__left {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-list-left__item {
   padding: 1rem 3rem;
+}
+
+.nav-list-right__item {
+  padding: 1rem 3rem;
+  border: 1px solid var(--gray-lightest);
+}
+
+.nav-list-right__item:hover {
+  border: 1px solid var(--gray-light);
 }
 
 a {
   text-decoration: none;
-  color: var(--white);
+  color: var(--gray-lightest);
 }
 
 a:hover {
-  color: var(--spring-green);
+  color: var(--gray-light);
 }
 </style>
