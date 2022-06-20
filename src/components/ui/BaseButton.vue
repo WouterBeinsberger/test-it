@@ -34,21 +34,42 @@ export default {
 </script>
 
 <style scoped>
-.button,
+button,
 a {
   cursor: pointer;
   font-size: var(--font-body-normal);
   border: none;
 }
 
+.button {
+  font-family: var(--font-montserrat);
+}
+
 .on {
   padding: 0.35rem 1rem;
-  background-color: var(--periwinkle-crayola);
+  background-color: var(--gray-lightest);
+  color: var(--gray-darkest);
 }
 
 .off {
   padding: 0.35rem 1rem;
-  background-color: var(--bdazzled-blue);
-  color: var(--periwinkle-crayola);
+  background-color: var(--gray);
+  color: var(--gray-darkest);
+}
+
+.default-padding {
+  padding: 0.75rem 1rem;
+}
+
+.green {
+  background-color: var(--green);
+}
+
+.green:hover {
+  background-color: var(--green-dark);
+}
+
+.white-text {
+  color: var(--gray-lightest);
 }
 </style>

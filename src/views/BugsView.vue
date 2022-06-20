@@ -1,13 +1,39 @@
 <template>
-  <hero-bugs-list></hero-bugs-list>
+  <div class="wrapper">
+    <div class="column left">
+      <hero-bugs-card></hero-bugs-card>
+    </div>
+    <div class="column right"></div>
+  </div>
 </template>
 
 <script>
-import HeroBugsList from '@/components/hero/HeroBugsList.vue'
+import HeroBugsCard from "@/components/hero/HeroBugsCard.vue";
 
 export default {
   components: {
-    HeroBugsList
-  }
-}
+    HeroBugsCard,
+  },
+};
 </script>
+
+<style scoped>
+.wrapper {
+  padding: var(--padding-normal);
+  display: flex;
+}
+
+.column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.left {
+  margin-right: 0.5rem;
+}
+
+.right {
+  margin-left: 0.5rem;
+}
+</style>
