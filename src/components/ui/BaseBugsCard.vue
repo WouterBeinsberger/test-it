@@ -25,7 +25,7 @@ section {
 }
 
 .title {
-  font-size: var(--font-heading-normal);
+  font-size: var(--font-heading-small);
   color: var(--gray-lightest);
   padding: 0.75rem 1rem;
 }

@@ -1,7 +1,7 @@
 <template>
   <base-bugs-card v-if="hero" class="hero" color="green">
     <template #title>
-      <h1 class="hero__title">{{ hero.content.section.name }}</h1>
+      {{ hero.content.section.name }}
     </template>
     <template #default>
       <h2 class="hero__sub-heading">UI</h2>
@@ -74,7 +74,7 @@ export default {
 <style scoped>
 .hero__sub-heading {
   color: var(--gray-lightest);
-  font-size: var(--font-sub-heading-normal);
+  font-size: var(--font-sub-heading-small);
   margin: 0;
   padding-bottom: 0.75rem;
 }

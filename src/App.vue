@@ -60,5 +60,7 @@ body {
   --font-body-normal: 1rem;
   --font-sub-heading-normal: 1.875rem;
   --font-heading-normal: 2.25rem;
+  --font-sub-heading-small: 1.313rem;
+  --font-heading-small: 1.875rem;
 }
 </style>
