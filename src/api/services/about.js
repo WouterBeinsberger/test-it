@@ -4,7 +4,7 @@ export default {
   getAboutUs() {
     return api.get('/about-us/')
   },
-  updateHero(data) {
+  updateAboutUs(data) {
     return api.put('/about-us/', data)
   }
 }
