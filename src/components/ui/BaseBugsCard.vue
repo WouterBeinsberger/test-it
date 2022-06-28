@@ -44,4 +44,8 @@ section {
 .green {
   background-color: var(--green);
 }
+
+.blue {
+  background-color: var(--blue);
+}
 </style>

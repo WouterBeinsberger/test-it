@@ -69,6 +69,14 @@ a {
   background-color: var(--green-dark);
 }
 
+.blue {
+  background-color: var(--blue);
+}
+
+.blue:hover {
+  background-color: var(--blue-dark);
+}
+
 .white-text {
   color: var(--gray-lightest);
 }

@@ -3,16 +3,20 @@
     <div class="column left">
       <hero-bugs-card></hero-bugs-card>
     </div>
-    <div class="column right"></div>
+    <div class="column right">
+      <about-us-bugs-card></about-us-bugs-card>
+    </div>
   </div>
 </template>
 
 <script>
 import HeroBugsCard from "@/components/hero/bugs/HeroBugsCard.vue";
+import AboutUsBugsCard from "@/components/about/bugs/AboutUsBugsCard.vue";
 
 export default {
   components: {
     HeroBugsCard,
+    AboutUsBugsCard,
   },
 };
 </script>
