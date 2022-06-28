@@ -22,6 +22,7 @@
       >
         <about-us-list-item-card
           :aboutUsItem="aboutUsListItem"
+          v-if="aboutUsListItem.isDisplayed"
           :id="aboutUsListItem.elementId"
         ></about-us-list-item-card>
       </template>
