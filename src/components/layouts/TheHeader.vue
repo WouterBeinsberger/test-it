@@ -1,5 +1,5 @@
 <template>
-  <header :style="changePosition()">
+  <header>
     <nav :style="justifyContect()">
       <ul class="nav-list__left" v-if="!isBugsClicked">
         <li class="nav-list-left__item">
@@ -46,11 +46,6 @@ export default {
     justifyContect() {
       if (this.isBugsClicked) {
         return "justify-content: flex-end";
-      }
-    },
-    changePosition() {
-      if (!this.isBugsClicked) {
-        return "position: absolute";
       }
     },
   },
