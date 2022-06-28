@@ -1,5 +1,5 @@
 <template>
-  <base-bugs-card v-if="hero" class="hero" color="green">
+  <base-bugs-card v-if="hero" class="hero" :color="heroCardClasses">
     <template #title>
       {{ hero.content.section.name }}
     </template>
@@ -25,7 +25,7 @@
       <base-button
         class="hero_button"
         @click="updateHero()"
-        classes="green white-text default-padding"
+        :classes="heroButtonClasses"
       >
         <strong>SAVE</strong>
       </base-button>
@@ -49,6 +49,15 @@ export default {
   computed: {
     hero() {
       return this.$store.getters["hero/hero"];
+    },
+    color() {
+      return this.$store.getters["hero/color"];
+    },
+    heroCardClasses() {
+      return this.color;
+    },
+    heroButtonClasses() {
+      return `${this.color} white-text default-padding`;
     },
   },
   methods: {

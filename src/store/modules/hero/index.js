@@ -8,7 +8,8 @@ export default {
   },
   state() {
     return {
-      hero: null
+      hero: null,
+      color: "green"
     }
   },
   mutations,
