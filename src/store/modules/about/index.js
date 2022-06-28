@@ -8,7 +8,8 @@ export default {
   },
   state() {
     return {
-      about: null
+      about: null,
+      color: "blue"
     }
   },
   mutations,
