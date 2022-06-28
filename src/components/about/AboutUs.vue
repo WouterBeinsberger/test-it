@@ -70,11 +70,11 @@ export default {
 .about-us__title {
   color: var(--gray-lightest);
   font-size: var(--font-heading-normal);
-  padding-bottom: 75px;
 }
 
 .about-us__list {
   width: 100%;
+  padding: 75px 0px;
   display: flex;
   justify-content: space-between;
 }
