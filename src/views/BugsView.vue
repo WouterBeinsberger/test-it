@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import HeroBugsCard from "@/components/hero/HeroBugsCard.vue";
+import HeroBugsCard from "@/components/hero/bugs/HeroBugsCard.vue";
 
 export default {
   components: {
