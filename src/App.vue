@@ -57,6 +57,7 @@ body {
   --font-montserrat: "Montserrat", sans-serif;
   --font-fira-code: "Fira Code", monospace;
   --padding-normal: 0rem 15rem 0rem 15rem;
+  --font-body-large: 1.5rem;
   --font-sub-heading-large: 3.75rem;
   --font-heading-large: 5rem;
   --font-body-normal: 1rem;
