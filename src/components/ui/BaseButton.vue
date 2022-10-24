@@ -77,6 +77,14 @@ a {
   background-color: var(--blue-dark);
 }
 
+.yellow {
+  background-color: var(--yellow);
+}
+
+.yellow:hover {
+  background-color: var(--yellow-dark);
+}
+
 .white-text {
   color: var(--gray-lightest);
 }

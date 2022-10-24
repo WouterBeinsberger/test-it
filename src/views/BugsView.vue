@@ -1,10 +1,11 @@
 <template>
   <div class="wrapper">
     <div class="column left">
-      <hero-bugs-card></hero-bugs-card>
+      <hero-bugs-card class="spacer"></hero-bugs-card>
+      <services-bugs-card class="spacer"></services-bugs-card>
     </div>
     <div class="column right">
-      <about-us-bugs-card></about-us-bugs-card>
+      <about-us-bugs-card class="spacer"></about-us-bugs-card>
     </div>
   </div>
 </template>
@@ -12,11 +13,13 @@
 <script>
 import HeroBugsCard from "@/components/hero/bugs/HeroBugsCard.vue";
 import AboutUsBugsCard from "@/components/about/bugs/AboutUsBugsCard.vue";
+import ServicesBugsCard from "@/components/services/bugs/ServicesBugsCard.vue";
 
 export default {
   components: {
     HeroBugsCard,
     AboutUsBugsCard,
+    ServicesBugsCard,
   },
 };
 </script>
@@ -39,5 +42,9 @@ export default {
 
 .right {
   margin-left: 0.5rem;
+}
+
+.spacer {
+  margin-bottom: 1rem;
 }
 </style>

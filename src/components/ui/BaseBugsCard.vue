@@ -48,4 +48,8 @@ section {
 .blue {
   background-color: var(--blue);
 }
+
+.yellow {
+  background-color: var(--yellow);
+}
 </style>
