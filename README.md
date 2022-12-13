@@ -65,8 +65,8 @@ Once started the app is running on your local network, you can navigate to: http
   - [x] update about us data
   - [x] Fetch services data
   - [x] update services data
-  - [ ] Fetch likes data
-  - [ ] update likes data
+  - [x] Fetch likes data
+  - [x] update likes data
   - [ ] Fetch contact data
   - [ ] update contact data
 - [x] Routes
@@ -76,7 +76,7 @@ Once started the app is running on your local network, you can navigate to: http
   - [x] Create hero store
   - [x] Create about us store
   - [x] Create services store
-  - [ ] Create likes store
+  - [x] Create likes store
   - [ ] Create contact store
 - [x] Views
   - [x] Create home view
