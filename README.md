@@ -17,7 +17,8 @@ You have full control on almost every UI component or element. The following can
 
 ## Requirements
 
-1. [Node.js](https://nodejs.org/en/download/) installed
+1. [Test-it backend](https://github.com/WouterBeinsberger/test-it-backend) installed
+2. [Node.js](https://nodejs.org/en/download/) installed
 
 Node installation guide:
 - on [windows](https://radixweb.com/blog/installing-npm-and-nodejs-on-windows-and-mac#windows)
